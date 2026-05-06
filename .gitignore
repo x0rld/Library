@@ -292,3 +292,7 @@ __pycache__/
 # Visual Studio Code gitignore 
 **/.vscode/*
 
+# ncrunch temp files
+*.ncrunchproject
+*.v3.ncrunchsolution
+
