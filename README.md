@@ -76,3 +76,12 @@ Remarques :
 Durée estimée : 45 minutes
 
 L’objectif est de tester unitairement la logique d’emprunt implémentée à l’étape précédente.
+
+
+### Remarques
+* En amélioration j'aurais voulu utiliser des enum au lieu de string pour les code de refus. Je suis parti initialement sur une string pour faire au plus simple et je comptais le changer par la suite.
+
+* J'ai préféré utiliser des record aux classes + constructeurs par habitudes de ne pas avoir à gérer l'immutabilité manullement  
+
+* J'ai utilisé un test d'intégration pour reproduire et valider que le bug ne se reproduise plus
+* Pour les retours des endpoints je comptais ne pas utiliser ActionResult mais plutot Results<T> pour avoir un retour entièrement Typé, ce qui de mémoire permet d'ajouter les metadata pour openApi en plus
