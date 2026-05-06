@@ -1,5 +1,6 @@
 ﻿using FnacDarty.TechnicalTest.Library.Domain.Interfaces;
 using FnacDarty.TechnicalTest.Library.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FnacDarty.TechnicalTest.Library.Controllers
@@ -29,6 +30,12 @@ namespace FnacDarty.TechnicalTest.Library.Controllers
             _bookService.AddBook(request.Title, request.Author);
 
             return Ok();
+        }
+
+        [HttpPost("borrow")]
+        public BorrowBookResponse BorrowBook(BorrowBookRequest request)
+        {
+            throw new NotImplementedException();
         }
     }
 }

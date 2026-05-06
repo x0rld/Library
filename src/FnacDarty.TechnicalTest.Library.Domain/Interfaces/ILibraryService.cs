@@ -4,8 +4,9 @@ namespace FnacDarty.TechnicalTest.Library.Domain.Interfaces
 {
     public interface ILibraryService
     {
-        void AddBook(string Title, string Author);
+        void AddBook(string title, string author);
 
         IReadOnlyCollection<Book> GetAllBooks();
+        void BorrowBooks(int customerId, IReadOnlyCollection<int> bookIds);
     }
 }
