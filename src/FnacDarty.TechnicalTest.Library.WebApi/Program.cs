@@ -37,4 +37,5 @@ void ConfigureServices(IServiceCollection services)
 {
     services.AddScoped<IBookRepository, BookRepository>();
     services.AddScoped<ILibraryService, LibraryService>();
+    services.AddScoped<ILoanService, LoanService>();
 }

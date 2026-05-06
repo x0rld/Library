@@ -1,4 +1,5 @@
 ﻿using FnacDarty.TechnicalTest.Library.Domain.Entities;
+using FnacDarty.TechnicalTest.Library.Models;
 
 namespace FnacDarty.TechnicalTest.Library.Domain.Interfaces
 {
@@ -7,6 +8,7 @@ namespace FnacDarty.TechnicalTest.Library.Domain.Interfaces
         void AddBook(string title, string author);
 
         IReadOnlyCollection<Book> GetAllBooks();
-        void BorrowBooks(int customerId, IReadOnlyCollection<int> bookIds);
+        
+        BorrowedBookResult BorrowBooks(int customerId, IReadOnlyCollection<int> bookIds);
     }
 }

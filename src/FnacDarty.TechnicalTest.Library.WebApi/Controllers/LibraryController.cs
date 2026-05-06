@@ -1,5 +1,6 @@
 ﻿using FnacDarty.TechnicalTest.Library.Domain.Interfaces;
 using FnacDarty.TechnicalTest.Library.Models;
+using FnacDarty.TechnicalTest.Library.WebApi.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,9 +34,10 @@ namespace FnacDarty.TechnicalTest.Library.Controllers
         }
 
         [HttpPost("borrow")]
-        public BorrowBookResponse BorrowBook(BorrowBookRequest request)
+        public ActionResult<BorrowedBookResult> BorrowBooks(BorrowBooksRequest request)
         {
-            throw new NotImplementedException();
+            var borrowBookResult = _bookService.BorrowBooks(request.CustomerId, request.BookIds);
+            return Ok(borrowBookResult);
         }
     }
 }
