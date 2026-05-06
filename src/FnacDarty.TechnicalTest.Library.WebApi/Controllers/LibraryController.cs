@@ -24,7 +24,7 @@ namespace FnacDarty.TechnicalTest.Library.Controllers
         }
 
         [HttpPost("addBook")]
-        public IActionResult AddBook([FromForm] AddBookRequest request)
+        public IActionResult AddBook( AddBookRequest request)
         {
             _bookService.AddBook(request.Title, request.Author);
 
